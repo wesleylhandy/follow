@@ -1,0 +1,70 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <meta name="description" content="URL Shortener Microservice made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      
+      <header>URL Shortener microservice</header>
+      <section>
+        <h1>
+          How does this work?
+        </h1>
+
+        <ol>
+          <li><p>
+            Call the <span class="code">/new</span> api followed by the url of the site you wish to shorten.
+            </p></li>
+          <li><p>
+            If the url is valid, this service will return a JSON object that includes both the requested url and the shortened url.
+            </p></li>
+          <li><p>
+            However, if the url is invalid, then it will return a JSON object with an error message.
+            </p>
+            <p>
+              For Instance:
+            </p>
+            <p>
+              Input -&gt;
+            </p>
+            <div>
+
+               <p class="code">
+                 <a href="https://follow.glitch.me/new/http://helloenjoy.com/project/lights/">https://follow.glitch.me/new/http://helloenjoy.com/project/lights/</a>
+              </p>
+            </div>
+            
+            <p>
+              Output -&gt;
+            </p>
+            <p class="code">
+              {  "original_url" : "http://helloenjoy.com/project/lights/" ,  "short_url" : "https://follow.glitch.me/HJd8hPMDW" }
+            </p>
+            <p>
+              See it in action by clicking on this link: <a href="https://follow.glitch.me/HJd8hPMDW" target="_blank">https://follow.glitch.me/HJd8hPMDW</a>
+            </p>
+          </li>
+
+        </ol>
+      </section>
+    </div>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
