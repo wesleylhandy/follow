@@ -1,0 +1,105 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  text-transform: uppercase;
+  color: cornflowerblue;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 2.5px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5), 15px 15px 15px #747474;
+  text-align: center;
+  animation: 3s waddle infinite;
+  animation-direction: alternate;
+  margin: 25px;
+}
+
+@keyframes waddle {
+  from {
+    transform: perspective(50px) translateZ(-1px) rotateY(-1deg);
+  }
+  to {
+    transform: perspective(50px) translateZ(-1px) rotateY(1deg);
+  }
+}
+
+h1 {
+  font-weight: bold;
+  color: deeppink;
+  margin: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  width: 80%;
+  max-width: 768px;
+}
+
+section {
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 12.5px;
+}
+
+li p {
+  margin: 12.5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}
+
+.code {
+  color: crimson;
+  background: #eaeaea;
+  display: inline;
+  padding: 0 10px;
+  line-height: 50px;
+}
+
+li p.code {
+    margin-left: 50px;
+}
+
+.code a {
+  color: inherit;
+
+}
+
+.code a:hover {
+  cursor: text;
+}
